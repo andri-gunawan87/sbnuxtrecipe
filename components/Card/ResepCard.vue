@@ -9,7 +9,7 @@
         </nuxt-link>
 				<span class="title_link">Kesulitan: {{ resep.dificulty }}<br>
         <b>Waktu: {{ resep.times }}</b><br></span>
-        <b>Porsi: {{ resep.portion }}</b><br>
+        <b>Porsi: {{ resep.portion }}</b><br> 
 				<br>
 			</div>
 		</div>
