@@ -6,7 +6,7 @@
       </p>
       <a
         class="comment_text username_comments"
-        href="{% url 'profile' comment.user.id %}"
+        href=""
         >{{ article.key }}</a
       >
     </div>

@@ -1,5 +1,6 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
+  target: 'static',
   head: {
     title: 'Resep',
     htmlAttrs: {
@@ -48,9 +49,7 @@ export default {
   },
 
   axios: {
-    baseURL: 'https://masak-apa.tomorisakura.vercel.app',
-    proxyHeaders: false,
-    credentials: false
+    baseURL: 'https://masak-apa.tomorisakura.vercel.app'
   },
 
   pwa: {
