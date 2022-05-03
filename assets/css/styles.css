@@ -2,6 +2,22 @@ body {
 	margin-top: 20px;
 	background-color: #f1f1f1;
 }
+
+.resep-category {
+	height: 70px;
+	background-size: cover;
+background-position: center center;
+box-sizing: border-box;
+}
+
+.category-name {
+	text-shadow: 1px 1px #000000
+}
+
+.bg-medium {
+	background-color: #adb5bd !important;
+}
+
 a:link{
 	text-decoration: none;
 }

@@ -3,19 +3,18 @@
     <div class="custom_font custom_navbar">
       <b>
         <nuxt-link class="navbar-item" to="/">Home</nuxt-link><br />
-        <a href="" class="hyper_link"
-          >Recipe Category</a
-        ><br />
+        <nuxt-link class="hyper_link" to="/resep-category">
+          Recipe Category</nuxt-link><br />
         <a href="" class="hyper_link">All Recipe</a><br />
         <a href="" class="hyper_link">New Recipe</a><br />
         <a href="" class="hyper_link">Article</a><br />
-        <form class="d-flex search" action="" method="get">
+        <form class="d-flex search" action="/search" method="get">
           <input
-            class="form-control me-2"
+            class="form-control me-2 text-center"
             type="text"
             name="q"
-            placeholder="Search"
-            aria-label="Search"
+            placeholder="Cari Resep"
+            aria-label="Cari Resep"
           /><br /></form
       ></b>
     </div>

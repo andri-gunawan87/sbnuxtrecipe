@@ -1,8 +1,7 @@
 <template>
   <div class="col-md-8 index_carousel">
-    <!-- Slideshow container -->
     <center>
-      <p class="custom_font">Highlight</p>
+      <p class="custom_font text-capitalize">{{ paramId }}</p>
       <div class="slideshow-container bg">
         <CarousellCard
           v-for="(carousell, index) in carousells"
@@ -11,8 +10,6 @@
         />
         <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
         <a class="next" onclick="plusSlides(1)">&#10095;</a>
-      </div>
-      <div>
       </div>
     </center>
     <div>
@@ -41,28 +38,27 @@ export default {
   },
 
   data() {
-    return {};
+    return {
+      paramId: this.$route.params.id,
+      paramtitle: this.$route.params.title,
+
+      reseps: [],
+      carousells: [],
+    };
   },
 
-  mounted() {
+  beforeUpdate() {
     showSlides(slideIndex);
   },
 
-  // async fetch() {
-  //   await this.$axios
-  //     .get("/api/recipes")
-  //     .then((res) => (this.Reseps = res.data.results));
-  // },
-
-  async asyncData({ $axios }) {
-    const [resepsRes, carousellRes] = await Promise.all([
-      $axios.get("/api/recipes"),
-      $axios.get("/api/recipes-length/?limit=5"),
-    ]);
-    return {
-      reseps: resepsRes.data.results,
-      carousells: carousellRes.data.results,
-    };
+  async fetch() {
+    await this.$axios
+      .get("/api/categorys/recipes/" + this.paramId)
+      .then((res) => (this.reseps = res.data.results));
+    return this.$axios
+      .get("/api/categorys/recipes/" + this.paramId)
+      .then((res) => (this.carousells = res.data.results));
   },
+
 };
 </script>

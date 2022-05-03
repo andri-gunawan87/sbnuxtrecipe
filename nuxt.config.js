@@ -18,7 +18,8 @@ export default {
       { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Niconne&amp;display=swap"}
     ],
     script: [
-      { src: "https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" },
+      { src: "https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"},
+      { src: "https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"},
       { src: '/js/resep.js', body: true },
     ],
   },
@@ -49,7 +50,11 @@ export default {
   },
 
   axios: {
-    baseURL: 'https://masak-apa.tomorisakura.vercel.app'
+    proxy: true
+  },
+
+  proxy: {
+    '/api': 'https://masak-apa.tomorisakura.vercel.app'
   },
 
   pwa: {
