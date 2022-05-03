@@ -1,6 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
 	
-
 showSlides(slideIndex);
 
 // Next/previous controls
@@ -24,9 +23,7 @@ function showSlides(n) {
   }
   console.log(slides)
   slides[slideIndex-1].style.display = "block";
-  
 }
-
 
 function toggleEllipsis() {
 	var element = document.querySelector("#ellipsis-ex");
