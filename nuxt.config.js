@@ -50,12 +50,12 @@ export default {
   },
 
   axios: {
-    proxy: true
+    baseUrl: 'https://masak-apa.tomorisakura.vercel.app'
   },
 
-  proxy: {
-    '/api': 'https://masak-apa.tomorisakura.vercel.app'
-  },
+  // proxy: {
+  //   '/api': 'https://masak-apa.tomorisakura.vercel.app'
+  // },
 
   pwa: {
     meta: 'Resep Nusantara',

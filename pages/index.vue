@@ -18,7 +18,7 @@
     <div>
       <p class="custom_font cust_title">&nbsp; Latest Recipe</p>
       <hr />
-      <div class="row">
+      <div class="row justify-content-md-center">
         <ResepCard
           v-for="(resep, index) in reseps"
           :key="index"
@@ -26,6 +26,7 @@
         />
       </div>
     </div>
+    
   </div>
 </template>
 
@@ -60,7 +61,7 @@ export default {
       $axios.get("/api/recipes-length/?limit=5"),
     ]);
     return {
-      reseps: resepsRes.data.results,
+      reseps: resepsRes.data.results.slice(2),
       carousells: carousellRes.data.results,
     };
   },

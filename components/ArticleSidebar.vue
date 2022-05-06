@@ -3,7 +3,7 @@
     <h3 class="text-success">Latest Articles</h3>
     <hr />
     <ul class="comments">
-      <LatestArticleCard
+      <LatestArticleSidebarCard
           v-for="(article, index) in articles"
           :key="index"
           :article="article"
@@ -13,10 +13,10 @@
 </template>
 
 <script>
-import LatestArticleCard from './Card/LatestArticleCard.vue';
+import LatestArticleSidebarCard from './Card/LatestArticleSidebarCard.vue';
 export default {
   components: {
-    LatestArticleCard
+    LatestArticleSidebarCard
   },
 
   data() {

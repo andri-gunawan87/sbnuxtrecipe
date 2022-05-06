@@ -33,11 +33,11 @@
 						</tr>
 						<tr>
 							<td>Penulis</td>
-							<td><a class="comment_text" href="">{{ detail.author.user }}</a></td>
+							<td>{{ detail.author.user }}</td>
 						</tr>
                         <tr>
 							<td>Tanggal</td>
-							<td><a class="comment_text" href="">{{ detail.author.datePublished }}</a></td>
+							<td>{{ detail.author.datePublished }}</td>
 						</tr>
 					</table>
 					
@@ -46,8 +46,8 @@
 				<hr>
 				<hr>
 				<p>Deskripsi:</p>
-				<div id="ellipsis-ex" class="text-desc" onclick="toggleEllipsis()">				
-					<p>{{ detail.desc }}</p>
+				<div id="ellipsis-ex" class="text-desc mb-3" onclick="toggleEllipsis()">				
+					<p class="text_desc">{{ detail.desc }}</p>
 				</div>
 			<div class="row">				
 				<div class="col-md-6"><div class="accordion accordion-flush" id="accordionFlushExample"></div>

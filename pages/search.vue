@@ -1,5 +1,7 @@
 <template>
   <div class="col-md-8 index_carousel">
+      <div v-if="$fetchState.pending"><img src="~/static/img/loading.gif"></div>
+  <div v-else>
     <center>
       <p class="custom_font">Hasil pencarian dengan kata kunci </p>
     </center>
@@ -15,6 +17,7 @@
       </div>
     </div>
   </div>
+  </div>
 </template>
 
 <script>
@@ -29,9 +32,14 @@ export default {
   data() {
     return {
       query: this.$route.query.q,
-
       datas: [],
     };
+  },
+
+  watch: {
+    '$route.query'() {
+      this.submit(this.q)
+    }
   },
 
   async fetch() {

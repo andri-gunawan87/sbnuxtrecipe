@@ -1,6 +1,6 @@
 <template>
-  <div class="col-md-6 my-2">
-    <div class="category-block bg-medium resep-category" :style="{backgroundImage: `url(` + require(`~/static/img/${category.key}` + '.jpg') + `)` }">
+  <div class="col-md-4 my-2">
+    <div class="category-block bg-medium resep-category" :style="{backgroundImage: `url(` + require(`~/static/img/article-${category.key}` + '.jpg') + `)` }">
       <nuxt-link 
         class="
           block-link
@@ -12,14 +12,14 @@
           align-items-center
           p-4
         "
-        :title="category.category"
+        :title="category.title"
         data-tracking="link-click"
-        :data-tracking-value="category.category"
-        :to="{name: 'category-id', params: { category:category.key, id:1} }"
+        :data-tracking-value="category.title"
+        :to="{name: 'article-id', params: { article:category.key} }" 
       >
         <div class="overlay absolute-fill"></div>
         <span class="category-name text-white text-center h3 custom_font"
-          >{{ category.category }}</span
+          >{{ category.title }}</span
         >
       </nuxt-link>
     </div>

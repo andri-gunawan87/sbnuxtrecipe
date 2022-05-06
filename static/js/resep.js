@@ -29,32 +29,3 @@ function toggleEllipsis() {
 	var element = document.querySelector("#ellipsis-ex");
 	element.classList.toggle("text-desc");
 }
-
-function like_counter(id)  {
-		fetch('like/'+`${id}`)
-			.then(response => response.json())
-			.then(post => {
-				console.log(post.like);
-				let counter = post.like
-				document.querySelector('#like_'+`${id}`).innerHTML = counter + 1;				
-				document.querySelector(".like").className = 'btn btn-primary active like';
-				document.querySelector(".like").disabled = true;
-				document.querySelector(".dislike").disabled = false;
-				document.querySelector(".dislike").className = 'btn btn-outline-danger dislike';
-			})
-			
-	};
-	
-function dislike_counter(id)  {
-	fetch('like/'+`${id}`)
-		.then(response => response.json())
-		.then(post => {
-			console.log(post.like);
-			let counter = post.like
-			document.querySelector('#like_'+`${id}`).innerHTML = counter - 1;
-			document.querySelector(".dislike").className = 'btn btn-danger active dislike';
-			document.querySelector(".dislike").disabled = true;
-			document.querySelector(".like").disabled = false;
-			document.querySelector(".like").className = 'btn btn-outline-primary like';
-			})
-		};

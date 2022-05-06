@@ -1,5 +1,7 @@
 <template>
 <div class="col-md-8 index_carousel">
+  <div v-if="$fetchState.pending"><img src="~/static/img/loading.gif"></div>
+  <div v-else>
     <center>
       <p class="custom_font">Kategori Resep</p>
     </center>
@@ -10,6 +12,7 @@
           :category="category"
         />
     </div>
+  </div>
   </div>
 </template>
 <script>

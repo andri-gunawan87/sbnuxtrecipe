@@ -2,12 +2,11 @@
   <div>
     <div class="custom_font custom_navbar">
       <b>
-        <nuxt-link class="navbar-item" to="/">Home</nuxt-link><br />
+        <nuxt-link class="hyper_link" to="/">Home</nuxt-link><br />
         <nuxt-link class="hyper_link" to="/resep-category">
           Recipe Category</nuxt-link><br />
-        <a href="" class="hyper_link">All Recipe</a><br />
-        <a href="" class="hyper_link">New Recipe</a><br />
-        <a href="" class="hyper_link">Article</a><br />
+        <nuxt-link class="hyper_link" :to="{name: 'new-recipe-id', params: { id:1} }">New Recipe</nuxt-link><br />
+        <nuxt-link class="hyper_link" to="/article">Article</nuxt-link><br />
         <form class="d-flex search" action="/search" method="get">
           <input
             class="form-control me-2 text-center"
